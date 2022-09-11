@@ -1,0 +1,31 @@
+Algoritmo Ejercicio 
+	//Quishpe Patricio 1 sem B
+	
+	Definir  x,opc Como Entero
+	definir res Como Real
+	Escribir  "Escribe la cantidad de bits"
+	leer x
+	Escribir "A que unidad decesas transformar"
+	Escribir "1_ a Bytes"
+	Escribir "2_ a KB"
+	Escribir "3_ a MB"
+	leer opc
+	Segun opc Hacer
+		1:
+			Escribir "1_ a Bytes"
+			res = x/8
+			EScribir res, " bytes"
+		2:
+			Escribir "2_ a KB"
+			res = (x/8) / 2^10
+			EScribir res, " KB"
+			
+		3:
+			Escribir "3_ a MB"
+			res = (x/8) / 2^20
+			EScribir res, " MB"
+			
+		De Otro Modo:
+			Escribir "No se ha elegido un literal"
+	Fin Segun
+FinAlgoritmo

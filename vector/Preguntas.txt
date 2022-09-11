@@ -1,0 +1,72 @@
+1.-Escribir un programa que lea N números, los guarde en un vector y a continuación los imprima en orden inverso al de su entrada.
+
+2.- Realice un algoritmo que lea un vector con N elementos y determine la suma y el producto de todos los elementos del vector. Además, calcule el promedio de los elementos del vector y determine cuantos de los elementos del vector está por debajo del promedio. Imprima la suma, el producto, el promedio y la cantidad de elementos que están por debajo del promedio.
+
+3.- Lea un vector de N elementos. Determine cuál es el MENOR Y EL MAYOR valor  del vector.  Imprima los elementos del vector, el mayor y el menor elemento, y en qué posición se encuentran.
+
+4.- Se introducen a través del teclado 2 vectores V1 y V2  de N y M elementos respectivamente.  Elaborar un programa que una los dos vectores en un vector  de M + N elementos.
+
+  EJEMPLO:
+
+  Si V1 tiene 6 elementos y V2 tiene 4 elementos
+
+ V1(1) 	V1(2)	 V1(3) 	V1(4)	 V1(5)	 V1(6)
+2	5	11	6	7	9
+V2(1)	V2(2)	V3(3)	V1(4)
+4	6	8	9
+  Entonces el algoritmo resultante debe generar el vector de 10 elementos:
+
+V1(1)	V1(2)	V1(3)	V1(4)	V1(5)	V1(6)	V1(7)	V1(8)	V1(9)	V1(10)
+2	5	11	6	7	9	4	6	8	9
+
+5.- Leer un vector de N elementos y determinar cuál es el elemento que se repite mayor número de veces.
+
+  EJEMPLO:
+
+   Se lee el vector de 8 elementos
+
+V1(1)	V1(2)	V1(3)	V1(4)	V1(5)	V1(6)	V1(7)	V1(8)
+4	6	8	9	6	8	2	6
+   La salida sería:
+
+    El número que más veces se repite es el 6
+
+    El número 6 se repite 3 veces
+
+
+6.- Ordene un vector de N elementos  utilizando el Método de la Burbuja. 
+
+7.- Realice un algoritmo que lea un vector con N elementos, luego ordene los elementos leídos de forma ascendente. En otro vector, ordene los mismos elementos de forma descendente y por último, tome los dos vectores anteriores y multiplique su contenido y cargue su resultado en un tercer vector. Imprima los tres vectores resultantes y el vector original.
+
+8.- Realice un algoritmo que calcule la frecuencia de aparición de cada número que forma parte de un arreglo de N elementos
+
+   EJEMPLO:
+
+    Si lee el vector V1 de 8 elementos
+
+V1(1)	V1(2)	V1(3)	V1(4)	V1(5)	V1(6)	V1(7)	V1(8)
+4	6	8	9	6	8	2	6
+    La salida será:
+
+     Valor         Frecuencia
+
+       4                  1
+
+       6                  3
+
+       8                  2
+
+       9                  1
+
+       2                  1
+
+9.- De un curso de N estudiantes se almacenan en dos vectores el nombre y una nota por cada alumno.  Se desea obtener tres listados:
+
+Listado de los datos ingresados
+Listado en orden alfabético de los estudiantes con su respectiva nota
+Listado en orden descendente de acuerdo a la nota obtenida
+    La salida debe tener el siguiente formato:
+
+    No.    Nombre                Nota
+
+    ---------------------------------

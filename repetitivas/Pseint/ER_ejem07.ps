@@ -1,0 +1,23 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir n Como Entero
+	definir num,conta,dato como real
+	Escribir " a^(a-1) - 2a^(a-2) + 3a^(a-3) - ......."
+	Escribir "Numero de datos a sumar en la serie"
+	leer n
+	Escribir "De que numero se decea la serie"
+	leer num 
+	
+	conta = 0
+	para i <- 1 hasta n con paso 1 hacer
+		dato = i*num^(num-i)
+		
+		si (i%2)= 0 Entonces
+			dato = dato*(-1)
+		FinSi
+		Escribir "Termino n",i, " ",  dato
+		conta= conta + dato
+	FinPara
+	
+	Escribir "La suma de los terminos es: ", conta
+FinAlgoritmo

@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir inicio,final,conta como real
+	Escribir "Vamos a declarar un intervalo"
+	
+	Repetir
+		Escribir "inicio del intervalo, escribe un numero positivo: " Sin Saltar
+		leer inicio
+	Hasta Que inicio > 0
+	
+	Repetir
+		Escribir "Finalizacion del intervalo, escribe un numero positivo(recuerda debe ser mayor al inicio): " Sin Saltar
+		leer final
+	Hasta Que final > inicio
+	
+	para i <- inicio hasta final con paso 1 Hacer
+		conta = 0
+		para j <- 1 Hasta i con paso 1 Hacer
+			si i%j = 0 Entonces
+				conta = conta +1
+			FinSi
+		FinPara
+		si conta = 2 Entonces
+			Escribir "El numero ", i,  " es primo"
+		FinSi
+	FinPara
+	
+FinAlgoritmo

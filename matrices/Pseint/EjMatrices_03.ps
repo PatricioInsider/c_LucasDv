@@ -1,0 +1,32 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir m1,n,m,num Como Entero
+	
+	Escribir "Ingrese el numero de filas de la matriz m1: " Sin Saltar
+	leer n
+	Escribir "Ingrese el numero de columnas de la matriz m1: " Sin Saltar
+	leer m
+	
+	dimension m1[n,m]
+	
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+			leer m1[i,j]
+		FinPara
+	FinPara
+	
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			m1[i,j]= m1[i,j]*2
+		FinPara
+	FinPara
+	Escribir "_______________________________"
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			Escribir "Dato (", i, ",",j,"): "  sin saltar
+			Escribir m1[i,j]
+		FinPara
+	FinPara
+	
+FinAlgoritmo

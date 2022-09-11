@@ -1,0 +1,36 @@
+Algoritmo sin_titulo
+	
+	Escribir "Determinas una matriz diagonal"
+	definir n como entero
+	Escribir "Ingresa el numero de columnas y filas, para la matriz cuadrada: " Sin Saltar
+	leer n
+	
+	dimension m1[n,n]
+	
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+			leer m1[i,j]
+		FinPara
+	FinPara
+	s =s+ 1
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			Escribir m1[i,j], ", " Sin Saltar
+			si i==j Entonces
+				si m1[i,j] >0 Entonces
+					x=x+1
+				FinSi
+			SiNo
+				s=s+1
+			FinSi
+		FinPara
+		Escribir " "
+	FinPara
+	si x==n y ((s+x) == (n*n)) Entonces
+		Escribir "Si es una Matriz diagonal"
+	sino 
+		Escribir "No es una Matriz diagonal"
+	FinSi
+	
+FinAlgoritmo

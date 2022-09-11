@@ -1,0 +1,49 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio
+	definir m1,m2,n,m,num Como Entero
+	
+	Escribir "Ingrese el numero de filas de la matriz m1: " Sin Saltar
+	leer n
+	Escribir "Ingrese el numero de columnas de la matriz m1: " Sin Saltar
+	leer m
+	
+	dimension m1[n,m]
+	dimension m2[n+1,m+1]
+	
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+			leer m1[i,j]
+		FinPara
+	FinPara
+	
+	s=0
+	Escribir "Escribiendo resultados"
+	suma =0
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m+1 con paso 1 Hacer
+			
+			si j = (m+1) Entonces
+				m2[i,m+1] = suma
+				Escribir suma
+				s=s+suma
+				suma=0
+			SiNo
+				m2[i,j] = m1[i,j]
+				Escribir  m2[i,j], ", " sin saltar
+				suma = suma + m2[i,j] 
+			finsi
+		FinPara
+	FinPara
+	para i = 1 hasta n+1 Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			suma = suma +m2[j,i]
+		FinPara
+		Escribir suma, ", " sin saltar
+		m2[i,j]= suma 
+		suma=0
+	FinPara
+	Escribir s
+	
+	
+FinAlgoritmo

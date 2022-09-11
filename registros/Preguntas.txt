@@ -1,0 +1,61 @@
+1.-Se requiere un programa en C++ que almacene información de un curso de n estudiantes ingresados por teclado. El registro de los alumnos debe tener un nombre, una nota1, otra nota2, otra nota3 y el promedio de las tres notas. Diseñe el programa de tal forma que se ingrese los datos del alumno, las tres notas, y se calcule el promedio. Finalmente, el programa debe mostrar en pantalla todos los registros ingresados y al final mostrar el promedio del curso.
+
+2.- Realice un programa en C++ que permita registrar los datos de una agenda telefónica con los campos; primer nombre, apellidos, numero telefónico, dirección. Diseñe el programa para ingresar N registros y luego mostrar en pantalla de la siguiente manera:
+
+APELLIDOS            |      NOMBRE        | TELEFONO      | DIRECCION
+
+Perez Aldaz            | Juan Carlos         | 2387663         | Av. 11 de Noviembre 37-24
+
+
+3.- Diseñar un programa en C++ que pida el nombre, el apellido y la edad de cinco personas, los registre mediante "struct" y muestre los cinco registros, es decir un registro por línea, pero separados por comas (cada campo).
+
+4.- Desarrollar un programa en C++ que pida datosde 8 personas: nombre, dia de nacimiento, mes de nacimiento y año de nacimiento (mediante struct). Después deberá repetir lo siguiente: preguntar un numero de mes y mostrar en pantalla los datos de las personas que cumplan años durante ese mes. El programa terminará cuando se teclee 0 como número de mes.
+
+
+5.-  Realice un programa que pueda almacenar al menos 20 registros de personas con los campos: nombre, dirección, teléfono, edad. Deberá pedir los datos uno por uno, hasta que un nombre se introduzca vacío (se pulse intro sin teclear nada) Entonces deberá aparecer un menú que permita:
+
+Mostrar la lista de todos los nombres
+Mostrar las personas de cierta edad
+Mostrar las personas cuya inicial sea la que el usuario indique
+Salir del programa.
+ARCHIVOS
+
+
+6.- Realice un programa EN C++ que lea un fichero llamado "fichero.txt" y escriba en otro fichero llamado "fichero2.txt" el contenido del fichero de entrada (fichero.txt) con todas las letras en mayúsculas.
+
+    EJEMPLO:
+
+     fichero.txt          |    fichero2.txt
+
+     ---------------------------------------
+
+     Hola, mundo       |   HOLA, MUNDO
+
+     Como estamos?  |    COMO ESTAMOS?
+
+      Adios, adios....   |    ADIOS, ADIOS.....          
+
+7.- Diseñe un programa en C++ que lea un número N, el cual será el número de las últimas líneas de un fichero (Ej. 3 últimas líneas). Se asume que el fichero leído debe contener varias líneas de tal forma que el valor introducido por teclado sea menor al número de líneas del archivo.
+
+8.- Desarrollar un programa en C++ que dados dos ficheros de texto "f1.txt" y "f2.txt" en los que en cada linea tiene texto diferentes y suponiendo que los dos archivos tienen el mismo número de líneas. Diseñe el programa que lea los dos fichero línea por línea y escriba en un tercer fichero "f3.txt" una sola línea la unión de las dos líneas de los ficheros anteriores.
+
+   EJEMPLO:
+
+     f1.txt                 |    f2.txt             |    f3.txt
+
+     --------------------------------------------------------
+
+     Hola,                 |     mundo           |   Hola, mundo
+
+     Como                |    estamos?         |   Como estamos?
+
+      Adios,              |    adios....           |   Adios, adios...
+
+
+9.- Realice un programa en C++ que permita grabar cinco datos de una persona (NO es con struct) con los campos: nombre, apellido, dirección y teléfono. Primero se debe leer mediante teclado un registro e inmediatamente se debe guardar en el fichero físico. Finalmente se debe desplegar todo el archivo de la siguiente manera:
+
+    La salida debe tener el siguiente formato:
+
+    Nombre    Apellido         Dirección     Teléfono
+
+    ---------------------------------------------------

@@ -1,0 +1,21 @@
+Algoritmo ER_ejem02
+	//Quishpe Patricio 1 soft B
+	definir suma Como Entero
+	suma = 0
+	Repetir
+		Escribir "Escriba un numero positivo"
+		leer x
+		si x > 0 Entonces
+			Escribir  "Los divisores de ", x, " son: " sinsaltar
+			Para i <- 1 Hasta x Con Paso 1 Hacer
+				si (x%i) = 0 Entonces
+					Escribir i, " , " Sin Saltar
+					suma = suma +i
+				FinSi
+			Fin Para
+			x = 1
+			Escribir "Y la suma de los divisores es: ", suma
+		FinSi
+	Hasta Que x <0
+	
+FinAlgoritmo

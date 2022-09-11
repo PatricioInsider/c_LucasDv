@@ -1,0 +1,59 @@
+Algoritmo sin_titulo
+	
+	//Quishpe Patricio 1 soft B
+	definir aux, guardado,gua,v1 como real
+	definir n Como Entero
+	
+	Escribir "Ingrese la extension de v1: "Sin Saltar
+	leer n
+	
+	Dimension v1(n)
+	Dimension guardado(n)
+	Dimension gua(n)
+	
+	Escribir "Ingresa todos los datos array 1 : ____________"
+	para i <- 1 hasta n Con Paso 1 Hacer
+		Escribir "Ingresa el dato: (",i, ") = " Sin Saltar
+		leer v1(i)
+	FinPara
+	Escribir "_____________ "
+	
+	//proceso de conteo
+	para i <- 1 hasta n Con Paso 1 Hacer
+		suma=0
+		para j <- 1 hasta n Con Paso 1 Hacer
+			si v1(i)= v1(j) Entonces
+				suma= suma+1
+			FinSi
+		FinPara
+		gua(i)= suma
+	FinPara
+	//Ayuda a entender el proceso
+	//para i <- 1 hasta n Con Paso 1 Hacer
+	//	Escribir "el dato: ", v1(i), " se repite: ", gua(i)
+	//FinPara
+	
+	para i <- 1 hasta n Con Paso 1 Hacer
+		guardado(i) = gua(i)
+	FinPara
+	//ordenamiento de datos
+	para i <- 1 hasta n con paso 1 Hacer
+		para j <- 1 hasta (n-1) con paso 1 Hacer
+			si guardado(j) < guardado(j+1)  Entonces
+				aux= guardado(j)
+				guardado(j) = guardado(j+1)
+				guardado(j+1) = aux
+			FinSi
+			
+		FinPara
+	FinPara
+	//impresion de datos
+	
+	para i <- 1 hasta n Con Paso 1 Hacer
+		si guardado(1) == gua(i) Entonces
+			Escribir "El dato ", v1(i), " se repite ", guardado(i), " y este se ve por primera vez en la posicion ", i
+			i=n
+		FinSi
+	FinPara
+	
+FinAlgoritmo

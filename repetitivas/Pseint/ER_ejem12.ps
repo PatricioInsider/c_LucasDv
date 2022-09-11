@@ -1,0 +1,21 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir num,x como entero
+	definir oc Como Caracter
+	Escribir "Ingresa el numero decimal para convertir a numero octal"
+	leer num
+	oc= ""
+	
+	si num > 8 Entonces
+		Repetir
+			x = trunc(num/8)
+			oc = ConvertirATexto(num mod 8) + oc
+			num = x
+		Hasta Que num = 0
+		Escribir "El numero decimal es: ", oc
+	sino 
+		oc = ConvertirATexto(num)
+		Escribir "El numero decimal es: ", oc
+	FinSi
+	
+FinAlgoritmo

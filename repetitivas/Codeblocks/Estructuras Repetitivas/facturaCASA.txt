@@ -1,0 +1,11 @@
+||=========================================================||
+||               INMOBILIARIA  DON CANGREJO                ||
+||---------------------------------------------------------||
+||  DIRECCION: Guayaquil y Espejo 1254                     ||
+||  FACTURA No.1                    ||
+||=========================================================||
+
+>> FACTURA DE COMPRA DE CASA/S 
+ NOMBRE DEL/A VENDEDOR/RA: Patricio_Quishpe CON CI: 1753873510
+ CASAS COMPRADAS: 3
+El total de la venta es de :45000

@@ -1,0 +1,50 @@
+Algoritmo sin_titulo
+	//Patricio Quishpe soft 1 B
+	definir n,pri,aux,aux2,contador,suma,multi,razon como real
+	
+	Escribir "Numero de datos que deseas imprimir: " Sin Saltar
+	leer n
+	Escribir "Escribe el primer termino: " Sin Saltar
+	leer pri
+	aux = pri
+	Escribir "EScribir la razon de la progresion: " Sin Saltar
+	leer razon
+	aux2 = razon
+	contador= 0
+	Escribir "Progresion aritmetica: " Sin Saltar	
+	mientras contador <> n Hacer
+		Escribir pri, ", "Sin Saltar
+		pri = pri*razon
+		contador= contador +1
+	FinMientras
+	
+	Escribir " "
+	contador= 0
+	suma=0
+	pri = aux
+	razon=aux2
+	
+	Escribir "SUMA: " Sin Saltar	
+	mientras contador <> n Hacer
+		Escribir pri, " + "Sin Saltar
+		suma= suma+pri
+		pri = pri*razon
+		contador= contador +1
+	FinMientras
+	Escribir " = ", suma
+	
+	Escribir " "
+	contador= 0
+	multi=1
+	pri = aux
+	razon=aux2
+	
+	Escribir "Multiplicacion: " Sin Saltar	
+	mientras contador <> n Hacer
+		Escribir pri, " * "Sin Saltar
+		multi= multi*pri
+		pri = pri*razon
+		contador= contador +1
+	FinMientras
+	Escribir " = ", multi
+FinAlgoritmo

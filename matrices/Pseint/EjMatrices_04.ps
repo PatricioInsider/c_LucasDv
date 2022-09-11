@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	definir m1 Como Entero
+	//Quishpe Patricio
+	Escribir "Ingrese el numero de columnas de la matriz m1: " Sin Saltar
+	leer m
+	dimension m1[2,m]
+	
+	multi=0
+	para i = 1 hasta 2 Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			si i = 1 Entonces
+				Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+				leer m1[i,j]
+			sino
+				m1[i,j] = m1[1,j] * m1[1,j]
+			FinSi
+			//Imprimir datos
+		FinPara
+
+	FinPara
+	Escribir "Resultado"
+	para i = 1 hasta 2 Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): ", m1[i,j]
+		FinPara
+	FinPara
+	
+FinAlgoritmo

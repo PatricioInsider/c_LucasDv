@@ -1,0 +1,59 @@
+Algoritmo sin_titulo
+	definir v1, v1volteado,v2,v3 Como Real
+	
+	Escribir "Ingrese la magnitud de su vector: " Sin Saltar
+	leer n
+	
+	Dimension v1(n)
+	Dimension v1volteado(n)
+	Dimension v2(n)
+	Dimension v3(n)
+	
+	
+	Escribir "Ingresa todos los datos array 1 : ____________"
+	para i <- 1 hasta n Con Paso 1 Hacer
+		Escribir "Ingresa el dato: (",i, ") = " Sin Saltar
+		leer v1(i)
+	FinPara
+	Escribir "_____________ "
+	
+	para i <- 1 hasta n Con Paso 1 Hacer
+		v1volteado(i)= v1(i)
+		v2(i) = v1(i)
+	FinPara
+	
+	//forma descendente de menor a mayor
+	para i <- 1 hasta n con paso 1 Hacer
+		para j <- 1 hasta (n-1) con paso 1 Hacer
+			si v1volteado(j) > v1volteado(j+1)  Entonces
+				aux= v1volteado(j)
+				v1volteado(j) = v1volteado(j+1)
+				v1volteado(j+1) = aux
+			FinSi
+			
+		FinPara
+	FinPara
+	
+	//forma descendente de mayor a menor
+	para i <- 1 hasta n con paso 1 Hacer
+		para j <- 1 hasta (n-1) con paso 1 Hacer
+			si v2(j) < v2(j+1)  Entonces
+				aux= v2(j)
+				v2(j) = v2(j+1)
+				v2(j+1) = aux
+			FinSi
+		FinPara
+	FinPara
+	
+	
+	para i <- 1 hasta n Con Paso 1 Hacer
+		v3(i)= v1volteado(i)*v2(i)
+	FinPara
+	
+	//EStructura de impresion para control
+	Escribir "v1 /v2 /v3            Vec Original"
+	para i <- 1 hasta n Con Paso 1 Hacer
+		Escribir v1volteado(i)," x ", v2(i)," = ",v3(i), "                 ", v1(i)
+	FinPara
+	
+FinAlgoritmo

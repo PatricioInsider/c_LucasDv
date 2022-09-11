@@ -1,0 +1,94 @@
+1.- Escribir un programa que llene una matriz de N por N de valores aleatorios entre 1 y 100. A continuación el programa debe imprimirla por pantalla.  El programa puede también imprimir las sumas de las filas y las columnas. NOTA: Consulte la función en PSeINT que genera números aleatorios.
+
+2.- Escribir un programa  que sume, independientemente, los elementos positivos y negativos de una matriz de N x M:
+
+     Ejemplo: Si ingresamos la siguiente matriz de 3x3
+
+-12	23	32
+45	-56	-10
+25	78	89
+      Suma de los elementos positivos: 292
+
+       Suma de los elementos negativos: 78
+
+3.- Escribir un programa que multiplique por 2  los elementos  de una  matriz de N x M.
+
+      Ejemplo: Si ingresamos la siguiente matriz de 3x3
+
+4	7	8
+6	9	1
+10	0	3
+        La matriz resultante sería:
+
+8	14	16
+12	18	2
+10	0	6
+4.- Escribir un programa  que almacene en la segunda fila de una matriz  de  2 x N los cuadrados de los datos de la primera fila.  Los  datos de la primera fila deben ser leídos.
+
+  EJEMPLO:   Si los datos de la primera fila de una matriz de 2x5 son:
+
+ 3	 6	 7  	 8	9
+   La matriz resultante sería:
+
+3	6	7	8	9
+9	36	49	64	81
+
+5.- Escribir un programa que sume los datos de cada una de las filas de una matriz de  M x N; el resultado se almacenará en la última posición de cada fila.  El programa deberá también sumar los datos de cada una de las columnas; el resultado se almacenará en la última posición de cada columna.  Además la suma total de todos los elementos de la matriz se almacenará en el elemento de la esquina inferior derecha de la matriz.
+
+   EJEMPLO:   Se lee la siguiente matriz 3x4
+
+3	6	7	2
+1	4	3	4
+2	7	0	2
+   La matriz resultante sería:
+
+3	6	7	2	18
+1	4	3	4	12
+2	7	0	2	11
+6	17	10	8	41
+
+6.- Escribir un programa que genere la matriz transpuesta de una matriz de N x N.. La matriz transpuesta de una  matriz A se obtiene intercambiando filas por columnas y viceversa. 
+
+    EJEMPLO:   Se lee la siguiente matriz 3x3
+
+4	2	5
+3	6	9
+0	1	1
+     La matriz resultante sería:
+
+4	3	0
+2	6	1
+5	9	1
+7.- Determinar si una matriz leída de  N x N, es o no una matriz diagonal.  una matriz diagonal es una matriz cuadrada en que sus elementos son todos nulos salvo en la diagonal principal, y éstas pueden ser nulas o no.
+
+   EJEMPLO: Se lee la siguiente matriz 3x3
+4	3	0
+2	6	1
+5	9	1
+   NO es una matriz diagonal.
+
+  OTRO EJEMPLO: Se lee la siguiente matriz 3x3
+
+4	0	0
+0	6	0
+0	0	1
+   ES una matriz diagonal
+
+8.- Leer un vector V1 de N elementos y pasar sus elementos a una matriz cuadrada de M x M.  El  algoritmo debe permitir seleccionar si se quiere organizar los elementos de la matriz por filas o por columnas. Realice los controles respectivos.
+
+   EJEMPLO:
+
+    Si lee el vector V1 de 9 elementos
+
+V1(1)	V1(2)	V1(3)	V1(4)	V1(5)	V1(6)	V1(7)	V1(8)	V1(9)
+4	6	8	9	0	8	2	6	1
+     Se quiere organizar por FILAS
+
+     Entonces, se general la matriz de 3x3 elementos
+
+4	6	8
+9	0	8
+2	6	1
+   
+
+       Si el número de elementos  del vector no puede generar una matriz cuadrada sacar un mensaje de error

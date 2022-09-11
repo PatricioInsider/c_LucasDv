@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir m1,n,m,num Como Entero
+	//Ingreso de datos
+	Escribir "Ingrese el numero de filas de la matriz m1: " Sin Saltar
+	leer n
+	Escribir "Ingrese el numero de columnas de la matriz m1: " Sin Saltar
+	leer m
+	
+	dimension m1[n,m]
+	
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			num = azar[100]+1
+			m1[i,j] = num
+		FinPara
+	FinPara
+	
+	suma=0
+	//Impresion de datos
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta m con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): " ,m1[i,j]
+			suma = suma+ m1[i,j]
+		FinPara
+	FinPara
+	Escribir "Suma de  las filas y las columnas ", suma
+FinAlgoritmo

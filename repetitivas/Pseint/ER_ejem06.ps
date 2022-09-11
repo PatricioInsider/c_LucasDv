@@ -1,0 +1,59 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft BD
+	definir opc,gra como entero
+	definir c,f,k como real
+	Escribir "Que tipo de conversion deceas escribir? "
+	Escribir "1. TRANSFORMAR GRADOS FAHRENHEIT A GRADOS CELSIUS"
+	Escribir "2. TRANSFORMAR GRADOS CELSIUS A GRADOS FAHRENHEIT"
+	Escribir "3. TRANSFORMAR GRADOS CENTIGRADOS A GRADOS KELVIN"
+	Escribir "4. TRANSFORMAR GRADOS KELVIN A GRADOS CENTIGRADOS"
+	Escribir "5. TRANSFORMAR GRADOS KELVIN A GRADOS FAHRENHEIT"
+	Escribir "6. SALIR"
+	Escribir "Escribe el numero"
+	leer opc
+	
+	si opc <> 6 entonces
+		Segun opc Hacer
+			1:
+				Escribir "___________"
+				Escribir "GRADOS FAHRENHEIT A GRADOS CELSIUS"
+				Escribir "Escribe los grados para la conversion"
+				leer gra 
+				c = (gra-32)/1.8
+				Escribir gra, " GRADOS FAHRENHEIT = ",c, " GRADOS CELSIUS"
+				
+			2:
+				Escribir "___________"
+				Escribir "GRADOS CELSIUS A GRADOS FAHRENHEIT"
+				Escribir "Escribe los grados para la conversion"
+				leer gra 
+				f = (gra*1.8)+32
+				Escribir gra, " GRADOS CELSIUS = ",f, " GRADOS FAHRENHEIT"
+			3:
+				Escribir "___________"
+				Escribir "GRADOS CENTIGRADOS A GRADOS KELVIN"
+				Escribir "Escribe los grados para la conversion"
+				leer gra 
+				k = gra + 273.15
+				Escribir gra, " GRADOS CENTIGRADOS = ",k, " GRADOS KELVIN"
+			4:
+				Escribir "___________"
+				Escribir "GRADOS KELVIN A GRADOS CENTIGRADOS"
+				Escribir "Escribe los grados para la conversion"
+				leer gra 
+				c = gra - 273.15
+				Escribir gra, " GRADOS KELVIN = ",c, " GRADOS CENTIGRADOS"
+			5:
+				Escribir "___________"
+				Escribir "GRADOS KELVIN A GRADOS FAHRENHEIT"
+				Escribir "Escribe los grados para la conversion"
+				leer gra 
+				f = ((gra-273.15)*(9/5))+32
+				Escribir gra, " GRADOS KELVIN = ",f, " GRADOS FAHRENHEIT"
+				
+			De Otro Modo:
+				Escribir "Error, No se encontro una opcion dentro del menu"
+		Fin Segun
+	FinSi
+	Escribir "saliendo..."
+FinAlgoritmo

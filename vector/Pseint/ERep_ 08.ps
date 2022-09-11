@@ -1,0 +1,36 @@
+Algoritmo sin_titulo
+	definir v1,cont,dif,suma Como Real
+	
+	Escribir "Ingrese la magnitud de su vector: " Sin Saltar
+	leer n
+	
+	Dimension v1(n)
+	Dimension cont(n)
+	Dimension dif(n)
+	
+	Escribir "Ingresa todos los datos array 1 : ____________"
+	para i <- 1 hasta n Con Paso 1 Hacer
+		Escribir "Ingresa el dato: (",i, ") = " Sin Saltar
+		leer v1(i)
+	FinPara
+	Escribir "_____________ "
+	
+	//proceso de conteo
+	para i <- 1 hasta n Con Paso 1 Hacer
+		suma=0
+		para j <- 1 hasta n Con Paso 1 Hacer
+			si v1(i)= v1(j) Entonces
+				suma= suma+1
+			FinSi
+		FinPara
+		cont(i)= suma
+	FinPara
+	
+	//impresion de resultados
+	
+	Escribir "Valor  /  Frecuencia"
+	para i <- 1 hasta n Con Paso 1 Hacer
+		Escribir v1(i),"   /    ",cont(i)
+	FinPara
+	
+FinAlgoritmo

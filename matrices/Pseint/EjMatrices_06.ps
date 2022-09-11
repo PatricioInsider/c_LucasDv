@@ -1,0 +1,41 @@
+Algoritmo sin_titulo
+	
+	definir m1,m2 como real
+	definir n como entero
+	
+	Escribir "Ingresa la longitud de la matriz transpuesta"
+	leer n
+	Dimension m1[n,n]
+	Dimension m2[n,n]
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+			leer m1[i,j]
+		FinPara
+	FinPara
+	
+	//Impresion de una matriz
+	Escribir "Matriz ingresante"
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			Escribir m1[i,j], ", " Sin Saltar
+		FinPara
+		Escribir " "
+	FinPara
+	
+	Escribir "Matriz ingresante"
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			m2[j,i]=m1[i,j]
+		FinPara
+	FinPara
+	
+	Escribir "Matriz resultado"
+	para i = 1 hasta n Con Paso 1 Hacer
+		para j= 1 hasta n con paso 1 Hacer
+			Escribir m2[i,j], ", " Sin Saltar
+		FinPara
+		Escribir " "
+	FinPara
+	
+FinAlgoritmo

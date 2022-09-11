@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	definir m1,num Como Entero
+	definir suma,res como real
+	//Ingreso de datos
+	
+	dimension m1[3,3]
+	para i = 1 hasta 3 Con Paso 1 Hacer
+		para j= 1 hasta 3 con paso 1 Hacer
+			Escribir "Dato ¨(", i, ",",j,"): "  sin saltar
+			leer m1[i,j]
+		FinPara
+	FinPara
+	
+	suma =0
+	res=0
+	para i = 1 hasta 3 Con Paso 1 Hacer
+		para j= 1 hasta 3 con paso 1 Hacer
+			si m1[i,j] >=0 Entonces
+				suma = suma +m1[i,j]
+			SiNo
+				res = res +m1[i,j]
+			FinSi
+		FinPara
+	FinPara
+	Escribir "Suma de los elementos positivos: ", suma
+	Escribir "Suma de los elementos negativos: ", res
+FinAlgoritmo

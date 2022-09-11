@@ -1,0 +1,19 @@
+1. Escriba un diagrama de flujo (y su codificación en C++) para calcular la longitud de la circunferencia y el área del círculo para un radio introducido por el teclado.
+
+2. Realizar un diagrama de flujo (y su codificación en C++) para intercambiar los valores de leídas. Por ejemplo: a = 5, b = 4; luego del intercambio se tendrá: a = 4, b = 5
+
+3. Escribir un diagrama de flujo (y su codificación en C++) para que transforme de segundos a su equivalente en horas, minutos y segundos. El valor de los segundos debe ingresarse por teclado.
+
+4. Elaborar un diagrama de flujo (y su codificación en C++) para calcular y desplegar en pantalla la hipotenusa de un triángulo rectángulo, aplicando el Teorema de Pitágoras. Los datos de los catetos se introducen por teclado. La fórmula es la siguiente: a2 + b2 = c2 en donde a y b son los catetos del triángulo y c es la hipotenusa.
+
+5. Realice un diagrama de flujo (y su codificación en C++) para calcular el área del triángulo mediante la fórmula: Area = (p(p - a)(p - b)(p - c))1/2 donde p es el semiperímetro, p = (a+b+c)/2, siendo a, b, c los tres lados del triángulo.
+
+6. Escribir un diagrama de flujo (y su codificación en C++) en donde se introducen como datos de entrada la longitud del perímetro de un terreno, expresada con tres números enteros que representan hectómetros, decámetros, y metros respectivamente. Se debe escribir, con un rótulo, la longitud en decímetros.
+
+7. Construir un diagrama de flujo (y su codificación en C++) que calcule y escriba el producto, cociente entero, y resto entero de dos números ingresados por teclado.
+
+8. Escribir un diagrama de flujo (y su codificación en C++) para que transforme grados Celsius en grados Fahrenheit. Recuerde que se debe introducir por teclado los grados Celcius.
+
+9. Elabore un diagrama de flujo (y su codificación en C++) que exprese cierta cantidad de dólares en billetes del curso legal. Es decir, que una cierta cantidad de dólares que se ingrese por teclado, se deberá expresar en billetes de 100 dólares, 20 dólares, 10 dólares, 5 dólares, y 1 dólar.
+
+10. Escriba un diagrama de flujo (y su codificación en C++) para que dadas tres variables A, B, y C escribir un diagrama de flujo y su Algoritmo que asigne a A el valor de B, a B el valor de C y a C el valor de A.

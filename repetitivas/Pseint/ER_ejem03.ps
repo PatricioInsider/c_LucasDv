@@ -1,0 +1,25 @@
+Algoritmo sin_titulo
+	//Quishpe Patricio 1 soft B
+	//serie de fibonacci
+	definir conta, a,b,aux,n Como Entero
+	
+	conta = 0 
+	a = 0
+	b = 1
+	aux=0
+	Escribir "Escribe los n primeros terminos que deseas de la serie "
+	leer n
+	Escribir "Los numeros elegidos son: " Sin Saltar
+	Repetir
+		Escribir a, ", " Sin Saltar
+		aux = a +b
+		a = b
+		b = aux
+		
+		conta = conta +1
+		si conta = n Entonces
+			opc = 1
+		FinSi
+	Hasta Que opc = 1
+	
+FinAlgoritmo

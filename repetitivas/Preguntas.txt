@@ -1,0 +1,115 @@
+1. Imprimir todos los números del 1 al 100 que sean múltiplos de N y M a la vez utilizando la estructura cualquier estructura de repetición
+2. Realizar un Algoritmo que lea un número positivo y determine sus divisores y la suma de éstos. Use la estructura HACER – MIENTRAS
+Ejemplo:
+Si N = 12
+Los divisores de 12 son: 1, 2, 3, 4, 6, 12
+La suma de los divisores es: 28
+
+
+Si N = 8
+Los divisores de 8 son: 1, 2, 4, 8
+La suma de los divisores es: 15
+
+
+3. Realizar un Algoritmo que permita escribir los N primeros términos de la serie de Fibonacci. La sucesión de Fibonacci se define de la siguiente forma. Use la estructura HACER - MIENTRAS.
+f(1) = 0
+f(2) = 1
+fNo = f(n-1)+f(n-2)
+es decir: 0, 1, 1, 2, 3, 5, 8, 13, 21………
+
+
+4. Diseñar un Algortimo que calcule el factorial de N números positivos ingresados desde el teclado, utilizando las estructuras MIENTRAS – HACER, o HACER – MIENTRAS, Y PARA - DESDE en la parte de resolución del factorial.
+
+
+5. Realizar un algoritmo para determinar el valor de:
+        F(X) = X2 - a
+    Para valores de X comprendidos entre -15 y 10 con incrementos de 0.5. Utilizar la estructura cualquier estructura de repetición
+
+
+6. Realizar un algoritmo que presente el siguiente menú:
+     a. TRANSFORMAR GRADOS FAHRENHEIT A GRADOS CELSIUS
+     b. TRANSFORMAR GRADOS CELSIUS A GRADOS FAHRENHEIT
+     c. TRANSFORMAR GRADOS CENTIGRADOS A GRADOS KELVIN
+     d. TRANSFORMAR GRADOS KELVIN A GRADOS CENTIGRADOS
+     e. TRANSFORMAR GRADOS KELVIN A GRADOS FAHRENHEIT
+     f. SALIR
+
+
+    Si se ingresa una opción diferente debe aparecer un mensaje de error y volver a solicitar una opción correcta.
+
+
+7. Diseñar un diagrama de flujo que permita generar la sumatoria de la serie:
+
+
+      a( a – 1) - 2a(a - 2) + 3a(a - 3) - .......
+
+8. Calcular la siguiente sumatoria:
+    
+9. Generar las tablas de multiplicar del 1 a N. Use la estructura PARA - DESDE
+
+
+    Ejemplo: Si N= 4
+    La salida debe ser:
+
+
+10. Calcular todos los números de cuatro cifras que sean cuadrados perfectos. Un número cuadrado perfecto, es un número entero que es el cuadrado de algún otro; dicho de otro modo, un número cuya raíz cuadrada es un número entero.
+    Ejemplo,
+    • 9 es un número cuadrado perfecto ya que puede ser escrito como 3 × 3.
+    • 1600 es un número cuadrado perfecto ya que puede ser escrito como 40 x 40.
+    • 1000 no es un número perfecto, porque su raíz cuadrada no es un número entero
+
+11. Realizar un Algortimo que indique cuales son los números primos existentes en un intervalo determinado ingresado como dato. Use cualquier estructura de repetición.
+    Por ejemplo:
+       Los números primos existentes ente 20 y 40 son:
+         23, 29, 31, 37
+    Consideraciones
+       * Se debe leer desde el teclado dos valores que forman parte del intervalo, m y n:
+       * m>n , caso contrario el proceso no se realiza.
+       * m y n deben ser números positivos
+
+
+12. Realice un Algoritmo que lea UN NUMERO en base 10 y lo transforme en un número de base 8.
+      Ejemplo 1:
+        Se lee: 79
+        79 transformado a base 8 es igual a 117
+     Ejemplo 2:
+       Se lee: 3581
+       3581 transformado a base 8 es igual a 6775
+
+13. Dados el primer término y la razón de una progresión geométrica, calcular la suma y el producto de los N primeros términos. Use la estructura mientras hacer.
+    Ejemplo: Primer término: 3
+                  Razón: 2
+                  N: 5
+                  Progresión Geométrica: 3, 6, 12, 24, 48
+                  SUMA: 3 + 6 + 12 + 24 + 48 = 93
+                  PRODUCTO: 3 * 6 * 12 * 24 * 48 = 248.832
+
+
+                  Primer término: 1
+                  Razón: 0.5
+                  N: 4
+                  Razón: 1, 0.5, 0.25, 0.125
+                  SUMA: 1 + 0.5 + 0.25 + 0.125 = 1.875
+                  PRODUCTO: 1 * 0.5 * 0.25 * 0.125 = 0.015625
+
+
+14. Dado un ángulo expresado en grados. Determinar el valor del seno del mismo utilizando el desarrollo de la serie de Mac Laurin. El ángulo debe pasarse a radianes. El número de términos es dado de entrada.
+
+
+   Nota: 360° = 2π radianes
+
+
+15. El valor de PI se puede calcular mediante la siguiente serie:
+
+
+Realice un Algortimo que calcule una aproximación al número PI usando un número de términos suministrado por el usuario.
+
+
+16. Realice un diagrama de flujo que dibuje un árbol sencillo en la pantalla. Se debe ingresar por el teclado el número de filas que contendrá el árbol a graficar, las mismas que deben ser superiores a 5
+
+
+    Ejemplo: Si se leen 6 filas el árbol sería
+
+
+   Ejemplo: Si se leen 9 filas el árbol sería
+
