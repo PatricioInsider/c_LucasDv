@@ -8,6 +8,7 @@ class calculadora {
 		private:
 			float num1,num2,num3;
 		public:
+			
 			void menu(){
 				cout<<"(1) Suma"<<endl;
 				cout<<"(2) Promedio"<<endl;
@@ -69,62 +70,63 @@ class calculadora {
 					}
 				}
 			};
+
+			void leer(){
+				int opc;
+				int o=1;
+				do{
+				cout <<"Bienvenido al programa"<< endl;
+				pedirDatos();
+				int p = 1;
+				do{
+					
+					menu();
+					cin>>opc;
+					switch(opc){
+						case 1:
+							cout<< "La suma es: "<<suma()<<endl;
+							break;
+						case 2:
+							cout<<"La Promedio es: "<<promedio()<<endl;
+							break;
+					
+						case 3:
+							cout<<"La Producto es: "<<producto()<<endl;
+							break;
+						case 4:
+							cout<<"La mayor es: "<<mayor()<<endl;
+							break;
+						case 5:
+							cout<<"La menor es: "<<menor()<<endl;
+							break;
+							
+						case 6:
+							p=0;
+							break;
+						case 7:
+							p=0;
+							o=0;
+							break;
+							
+						default:
+							cout<<"No se ingreso una respuesta adecuada"<<endl;
+					}
+					cout<<"_______________"<<endl;
+				}while(p==1);
+				
+				system("pause");
+				
+			}while(o==1);
+			}
+
+
 			
 };
 	
 	
 int main() {
-	calculadora ejer1;
-	int opc;
-    int o=1;
-    
-    //pilas aqui
-    
-    do{
-    	cout <<"Bienvenido al programa"<< endl;
-		ejer1.pedirDatos();
-	    int p = 1;
-	    do{
-	    	
-	    	ejer1.menu();
-		    cin>>opc;
-		    switch(opc){
-			    case 1:
-			        cout<< "La suma es: "<<ejer1.suma()<<endl;
-			        break;
-			    case 2:
-			    	cout<<"La Promedio es: "<<ejer1.promedio()<<endl;
-			        break;
-			
-			    case 3:
-			        cout<<"La Producto es: "<<ejer1.producto()<<endl;
-			        break;
-			    case 4:
-			    	cout<<"La mayor es: "<<ejer1.mayor()<<endl;
-			    	break;
-			    case 5:
-			    	cout<<"La menor es: "<<ejer1.menor()<<endl;
-			    	break;
-			        
-			    case 6:
-			    	p=0;
-			    	break;
-			    case 7:
-			    	p=0;
-			    	o=0;
-			    	break;
-			    	
-			    default:
-			        cout<<"No se ingreso una respuesta adecuada"<<endl;
-		    }
-	    	cout<<"_______________"<<endl;
-		}while(p==1);
-		
-	    system("pause");
-	    
-	}while(o==1);
-		return 0;
-    
-    
+	calculadora casio;
+	casio.leer();
+	return 0;
 }
 	
