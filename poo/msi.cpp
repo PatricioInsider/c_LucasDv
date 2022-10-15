@@ -7,18 +7,18 @@ class Humano{
 	public:
 		float peso,altura;
 		
-		float msi(){
+		float imc(){
 			return (peso/(altura*altura));
 		}
 		
 		void estado(){
-			if (msi()<18.5){
+			if (imc()<18.5){
 				cout <<"Bajo peso"<<endl;
-			}else if(msi()<24.9){
+			}else if(imc()<24.9){
 				cout <<"Peso Normal"<<endl;
-			}else if(msi()<29.9){
+			}else if(imc()<29.9){
 				cout <<"Sobrepeso"<<endl;
-			}else if(msi()>=29.9){
+			}else if(imc()>=29.9){
 				cout <<"Obeso"<<endl;
 			}
 			
@@ -31,7 +31,7 @@ class Humano{
 			cout<<"<ingresa la altura en mtrs: "<<endl;
 			cin>>altura;
 			
-			cout<<"Su masa corporal es de :"<<msi()<<"\n Asi que se encuentra en estado: ";
+			cout<<"Su masa corporal es de :"<<imc()<<"\n Asi que se encuentra en estado: ";
 			estado();
 		}
 		
