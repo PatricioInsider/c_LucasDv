@@ -6,7 +6,7 @@ using namespace std;
 class Bus
 {
 private:
-    string nombrePropietario,apellidoPropietario;
+    string nombrePropietario,apellidoPropietario,placa;
     int numero,cantidadAsientos;
 public:
     Bus();
@@ -23,12 +23,14 @@ public:
         cin>>numero;
         cout<<"Cantidad de asientos : ";
         cin>>cantidadAsientos;
+        cout<<"Placa del vehiculo"<<endl;
+        cin>>placa;
 
         system("cls");
     }
     void mostrar(void)
     {
-        cout<<nombrePropietario<<"\t"<<apellidoPropietario<<"\t"<<numero<<"\t"<<cantidadAsientos<<endl;
+        cout<<nombrePropietario<<"\t"<<apellidoPropietario<<"\t"<<numero<<"\t"<<cantidadAsientos<<"\t"<<placa<<endl;
     }
 
     //get y set a los atributos de la clase
@@ -53,12 +55,15 @@ public:
     {
         numero=aux;
     }
-
+    string getplaca (void)
+    {
+        return placa;
+    }
 };
 
 Bus::Bus()
 {
-    nombrePropietario=apellidoPropietario="";
+    nombrePropietario=apellidoPropietario=placa="";
     numero=cantidadAsientos=0;
 }
 
@@ -118,7 +123,7 @@ void reso_Ant()
         system("pause");
         cout<<"__________________________________________________"<<endl;
         cout<<"Buses con asientos mayores o iguales a 20"<<endl;
-        cout<<"Nom"<<"\t"<<"Apell"<<"\t"<<"Num"<<"\t"<<"canAsientos"<<"\t"<<endl;
+        cout<<"Nom"<<"\t"<<"Apell"<<"\t"<<"Num"<<"\t"<<"canAsientos"<<"\t"<<"Placa"<<"\t"<<endl;
         for (int i = 0; i < canBus; i++)
         {
             if (oBus[i].getcantidadAsientos()>=20)
@@ -128,12 +133,53 @@ void reso_Ant()
         }
     }
 
+
+    void buscar_propietario(void)
+    {
+        string buscarNombre;
+        cout<<"Busqueda de buses por propietario"<<endl;
+        cout<<"Ingresa el nombre: ";
+        cin>>buscarNombre;
+        cout<<"__________________________________________________"<<endl;
+        cout<<"Datos de los Buses con busqueda por propietario"<<endl;
+        cout<<"Nom"<<"\t"<<"Apell"<<"\t"<<"Num"<<"\t"<<"canAsientos"<<"\t"<<"Placa"<<"\t"<<endl;
+        for (int i = 0; i < canBus; i++)
+        {
+            if (oBus[i].getplaca()== buscarNombre)
+            {
+                oBus[i].mostrar();
+            }
+        }
+        system("pause");
+        
+    }
+
+    void buscar_placa(void)
+    {
+        string buscarPlaca;
+        cout<<"Busqueda de buses por propietario"<<endl;
+        cout<<"Ingresa el nombre: ";
+        cin>>buscarPlaca;
+        cout<<"__________________________________________________"<<endl;
+        cout<<"Datos de los Buses con busqueda por propietario"<<endl;
+        cout<<"Nom"<<"\t"<<"Apell"<<"\t"<<"Num"<<"\t"<<"canAsientos"<<"\t"<<"Placa"<<"\t"<<endl;
+        for (int i = 0; i < canBus; i++)
+        {
+            if (oBus[i].getplaca()== buscarPlaca)
+            {
+                oBus[i].mostrar();
+            }
+        }
+        system("pause");
+        
+    }
+
 };
 
 Cooperativa::Cooperativa(/* args */)
 {
     nombre="";
-    canBus=0;
+    canBus=numCooperativa=0;
 }
 
 Cooperativa::~Cooperativa()
@@ -146,5 +192,6 @@ int main (void)
     Valle.leer();
     Valle.reso_Ant();
     Valle.mostrar();
+    Valle.buscar_propietario();
     return 0;
 }
