@@ -16,8 +16,7 @@ class Point
 private:
     float x,y; 
 public:
-    Point(/* args */);
-    ~Point();
+    Point(float a,float b);
 
     void data_point(void)
     {
@@ -57,6 +56,10 @@ private:
     float r;
 public:
 
+    Circle(float a, float b, float c): Point(a, b)
+    {
+        r=c;
+    };
     void data_circle(void)
     {
         data_point();
@@ -98,9 +101,10 @@ class Cylinder: public Circle{
 private:
     float h;
 public:          
-    Cylinder(/* args */);
-    ~Cylinder();
-
+    Cylinder(float a,float b,float c,float d):Circle(a,b,c)
+    {
+        h=d;
+    }
     void data_cylinder()
     {
         data_circle();
@@ -142,32 +146,25 @@ public:
 
 };           
 
-Cylinder::Cylinder(/* args */)
+Point::Point(float a, float b)
 {
-}            
-
-Cylinder::~Cylinder()
-{
-}
-
-Point::Point(/* args */)
-{
-}
-
-Point::~Point()
-{
+    x=a;
+    y=b;
 }
 
 
 int main (void)
 {
-    Point oPoint;
+    //Point oPoint;
+    Point oPoint(0,0);
     oPoint.read_point();
     oPoint.show_point();
-    Circle oCircle;
+    //Circle oCircle;
+    Circle oCircle(0,0,0);
     oCircle.read_circle();
     oCircle.show_circle();
-    Cylinder oCylinder;
+    //Cylinder oCylinder;
+    Cylinder oCylinder(0,0,0,0);
     oCylinder.read_cylinder();
     oCylinder.show_cylinder();
     return 0;
