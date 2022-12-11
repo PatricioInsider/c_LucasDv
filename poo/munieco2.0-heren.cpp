@@ -161,7 +161,7 @@ public:
     {
         cout<<"Posicion: "<<endl;
         cout<<"x = "<<getx()<<endl;
-        cout<<"x = "<<gety()<<endl;
+        cout<<"y = "<<gety()<<endl;
         cout<<"r = "<<getr()<<endl;
         cout<<"Area= "<<area_cyl()<<endl;
         cout<<"Volumen = "<<vol_cyl()<<endl;
