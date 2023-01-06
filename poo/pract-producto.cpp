@@ -77,7 +77,7 @@ private:
 public:
     ProductoCongelado(/* args */);
     ~ProductoCongelado();
-    void leer_proCongelado()
+    void leer()
     {
         leer();
         cout<<"Temperatura de congelacion recomendada(grados Ccelsius): "<<endl;
@@ -121,7 +121,7 @@ public:
     	for (int i = 0; i < nCongelado; i++)
         {
         	cout<<"Ingresa Datos Del Producto Congelado "<<i+1<<endl;
-            oCongelado[i].leer_proCongelado();
+            oCongelado[i].leer();
         }
 	}
 	void ing_fresco()
@@ -132,7 +132,7 @@ public:
             oFresco[i].leer();
         }
 	}
-    void leer_empresa()
+    void leer()
     {
     	cout<<"____________________________________________"<<endl;
         cout<<"Empresa Agroalimentaria"<<endl;
@@ -236,7 +236,7 @@ Empresa::~Empresa()
 int main ()
 {
     Empresa SanJuan; 
-    SanJuan.leer_empresa();
+    SanJuan.leer();
     SanJuan.bus_fresco();
     SanJuan.tem_congelado();
 }
