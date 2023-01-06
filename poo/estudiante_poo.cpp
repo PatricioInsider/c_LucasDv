@@ -152,7 +152,7 @@ public:
 	// Declaracion de los datos que caracterizan a nuestro objeto
 	string nivel, paralelo, asignatura;
 	int n;
-	Estudiante est[50];
+	Estudiante *est[50];
 
 	// Creacion del Constructor y destructor con mensaje por consola al actuar
 	Curso()
@@ -161,6 +161,11 @@ public:
 	}
 	~Curso()
 	{
+		for (int i = 0; i < n; i++)
+		{
+			delete est[i];
+		}
+		
 		cout << "Me estoy eliminando (Objeto Curso)" << endl;
 	}
 
@@ -173,7 +178,7 @@ public:
 		for (int i = 0; i <= n; i++)
 		{
 			// impresion de cada una de los objetos de la clase estudiante
-			est[i].acumulacion();
+			est[i]->acumulacion();
 		}
 	};
 
@@ -192,7 +197,8 @@ public:
 		cin >> n;
 		for (int i = 0; i < n; i++) //Creamos la cantidad de elementos del vector est llamando a su read
 		{
-			est[i].read();
+			est[i] = new Estudiante;
+			est[i]->read();
 		}
 
 		// Llamamos a la funcion mostrar
@@ -203,7 +209,10 @@ public:
 int main()
 {
 	// Creamos el objeto curso y le ordenamos traer el metodo leer
-	Curso poo;
-	poo.leer();
+	Curso *ptr;
+	ptr= new Curso;
+	ptr->leer();
+
+	delete ptr;
 	return 0;
 }
