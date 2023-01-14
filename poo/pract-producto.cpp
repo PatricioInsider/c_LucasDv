@@ -7,11 +7,12 @@ class Producto
 {
 private:
     string nombre, fecha, lote;
+    int tipo;
 
 public:
     Producto(/* args */);
     ~Producto();
-    void leer()
+    virtual void leer()
     {
         cout << "Nombre del producto:" << endl;
         cin >> nombre;
@@ -21,15 +22,20 @@ public:
         cin >> lote;
     }
 
-    void mostrar()
+    virtual void mostrar()
     {
         cout << nombre << "\t" << fecha << "\t" << lote << "\t";
+    }
+    int gettipo()
+    {
+        return tipo;
     }
 };
 
 Producto::Producto(/* args */)
 {
     nombre = fecha = lote = "";
+    tipo = 0;
 }
 
 Producto::~Producto()
@@ -39,7 +45,8 @@ Producto::~Producto()
 class ProductoFresco : public Producto
 {
 private:
-    string id;
+    string id,origen;
+    int tipo;
 
 public:
     ProductoFresco(/* args */);
@@ -49,10 +56,13 @@ public:
         Producto::leer();
         cout << "Identificador: " << endl;
         cin >> id;
+        
+        cout << "Pais de origen: " << endl;
+        cin >> origen;
         cout << "***" << endl;
     }
 
-    int mostrar()
+    void mostrar()
     {
         Producto::mostrar();
         cout << id << "\t" << endl;
@@ -61,10 +71,19 @@ public:
     {
         return id;
     }
+    int gettipo()
+    {
+        return tipo;
+    }
+    string getorigen()
+    {
+        return origen;
+    }
 };
 
 ProductoFresco::ProductoFresco(/* args */)
 {
+    tipo = 2;
 }
 
 ProductoFresco::~ProductoFresco()
@@ -75,6 +94,7 @@ class ProductoCongelado : public Producto
 {
 private:
     float temperatura;
+    int tipo;
 
 public:
     ProductoCongelado(/* args */);
@@ -96,12 +116,25 @@ public:
     {
         return temperatura;
     }
+    int gettipo()
+    {
+        return tipo;
+    }
 };
 
 ProductoCongelado::ProductoCongelado(/* args */)
 {
+    tipo = 2;
 }
+// Retorna un atributo declarado en el constructor
 
+/*
+int Producto::gettipo()
+{
+    return tipo;
+
+}
+*/
 ProductoCongelado::~ProductoCongelado()
 {
 }
@@ -110,34 +143,36 @@ class Empresa
 {
 private:
     string nombre, direccion;
-    ProductoCongelado *oCongelado[100];
-    ProductoFresco *oFresco[100];
-    int nCongelado, nFresco;
+    Producto *vPs[100];
+    // ProductoCongelado *oCongelado[100];
+    // ProductoFresco *oFresco[100];
+    int nTotal;
 
 public:
     Empresa(/* args */);
     ~Empresa();
 
-    void ing_congelado()
+    void ing_congelado(int n1)
     {
-        for (int i = 0; i < nCongelado; i++)
+        for (int i = 0; i < n1; i++)
         {
             cout << "Ingresa Datos Del Producto Congelado " << i + 1 << endl;
-            oCongelado[i] = new ProductoCongelado;
-            oCongelado[i]->leer();
+            vPs[i] = new ProductoCongelado;
+            vPs[i]->leer();
         }
     }
-    void ing_fresco()
+    void ing_fresco(int n2)
     {
-        for (int i = 0; i < nFresco; i++)
+        for (int i = 0; i < n2; i++)
         {
             cout << "Ingresa Datos Del Producto Frescos " << i + 1 << endl;
-            oFresco[i] = new ProductoFresco;
-            oFresco[i]->leer();
+            vPs[i] = new ProductoFresco;
+            vPs[i]->leer();
         }
     }
     void leer()
     {
+        int n1, n2;
         cout << "____________________________________________" << endl;
         cout << "Empresa Agroalimentaria" << endl;
         cout << "Ingreso de Datos totales" << endl;
@@ -146,23 +181,24 @@ public:
         cout << "Direccion:" << endl;
         cin >> direccion;
         cout << "Cantidad de productos congelados" << endl;
-        cin >> nCongelado;
-        while (nCongelado < 0)
+        cin >> n1;
+        while (n1 < 0)
         {
             cout << "Ingresa un valor positivo" << endl;
-            cin >> nCongelado;
+            cin >> n1;
         }
-        ing_congelado();
+        ing_congelado(n1);
         system("pause");
         system("cls");
         cout << "Cantidad de productos frescos" << endl;
-        cin >> nFresco;
-        while (nFresco < 0)
+        cin >> n2;
+        while (n2 < 0)
         {
             cout << "Ingresa un valor positivo" << endl;
-            cin >> nFresco;
+            cin >> n2;
         }
-        ing_fresco();
+        ing_fresco(n2);
+        nTotal = n1 + n2;
         system("pause");
         system("cls");
     }
@@ -170,14 +206,18 @@ public:
     {
         int pos = -1;
         int i = 0;
-        if (nFresco > 0)
+        if (nTotal > 0)
             cout << "Buscando..." << endl;
         {
-            while ((pos == -1) && (i < nFresco))
+            while ((pos == -1) && (i < nTotal))
             {
-                if (oFresco[i]->getid() == bus)
+                if (vPs[i]->gettipo() == 2)
                 {
-                    pos = i;
+                    ProductoFresco *pAux = (ProductoFresco *)vPs[i];
+                    if (pAux->getid() == bus)
+                    {
+                        pos = i;
+                    }
                 }
                 i++;
             }
@@ -202,7 +242,7 @@ public:
         }
         else
         {
-            oFresco[aux]->mostrar();
+            vPs[aux]->mostrar();
         }
     }
     // Temperaturas <=-4
@@ -213,11 +253,18 @@ public:
         cout << "Todos los productos menores o iguales a -4 de temperatura" << endl;
         // Impresion de productos congelados -4
         cout << "Nombre\t F Cad\t Lote\t Temp\t" << endl;
-        for (int i = 0; i < nCongelado; i++)
+        if (nTotal > 0)
         {
-            if (oCongelado[i]->gettemperatura() <= -4)
+            for (int i = 0; i < nTotal; i++)
             {
-                oCongelado[i]->mostrar();
+                if (vPs[i]->gettipo() == 2)
+                {
+                    ProductoCongelado *pAux = (ProductoCongelado *)vPs[i];
+                    if (pAux->gettemperatura() <= -4)
+                    {
+                        vPs[i]->mostrar();
+                    }
+                }
             }
         }
     }
@@ -229,14 +276,9 @@ Empresa::Empresa()
 
 Empresa::~Empresa()
 {
-    for (int i = 0; i < nCongelado; i++)
+    for (int i = 0; i < nTotal; i++)
     {
-        delete oCongelado[i];
-    }
-
-    for (int i = 0; i < nFresco; i++)
-    {
-        delete oFresco[i];
+        delete vPs[i];
     }
 }
 
