@@ -327,42 +327,6 @@ public:
         return pos;
     }
 
-    /*void re_ordenar(int a)
-    {
-        for (int i = a; i < n; i++)
-        {
-            AvCarga *pAux = (AvCarga *)pAt[i];
-            if (pAt[i]->)
-            {
-                
-            }
-            
-            switch (menu())
-                {
-                case 1:
-                    cout << "Ingresa los datos del avion de turismo " << i + 1 << endl;
-                    pAt[i] = new AvTurista;
-                    pAt[i]->leer();
-                    break;
-                case 2:
-                    cout << "Ingresa los datos del avion de Pasajeros " << i + 1 << endl;
-                    pAt[i] = new AvCarga;
-                    pAt[i]->leer();
-                    break;
-                default:
-                    cout << "No se ingreso un dato valido" << endl;
-                    break;
-                }
-            
-            for (int j = a; i < n; i++)
-            {
-
-                
-            }
-            
-        }
-        
-    }*/
     void eliminar_elemento()
     {
         string elemento;
