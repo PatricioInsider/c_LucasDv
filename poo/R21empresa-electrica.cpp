@@ -92,12 +92,18 @@ public:
         Facturas::leer();
         cout << "Ingresa el descuento: ";
         cin >> des;
+        while(des<0)
+        {
+            cout << "De no tener descuento ingresa 0, pero no se puede ingresar un valor negativo"<<endl;
+            cout << "descuentos: " << endl;
+        cin >> des;
+        }
     }
 
     float total_pagar()
     {
         float totalAPagar;
-        totalAPagar = ((getlecActual() - getlecAnterior()) * getvalork()) - des;
+        totalAPagar = ((getlecActual() - getlecAnterior()) * getvalork()) - (des);
     }
     void mostrar()
     {
@@ -296,4 +302,6 @@ int main()
     EmpresaElectrica *pCentral = new EmpresaElectrica;
     pCentral->leer();
     pCentral->mostrar_nfactura();
+    pCentral->mostrar_findutriales();
+    delete pCentral;
 }
