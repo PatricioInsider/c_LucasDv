@@ -262,7 +262,7 @@ public:
         cout << "Direccion" << dir << endl;
         float v;
         cout << "Ingresa el valor" << endl;
-        
+        cin>>v;
         if (n > 0)
         {
             // tycast con validacion a los tres
@@ -271,40 +271,35 @@ public:
             { 
                 cout<<"_____________________________________________________"<<endl;
 
+                int pos = pTra[i]->gettipo();
 
-                switch (pTra[i]->gettipo())
+                if (pos==1)
                 {
-                case 1:
                     TraContratado *pAux;
                     pAux = (TraContratado *)pTra[i];
                     if (pAux->aPagar() > v)
                     {
                         pAux->mostrar();
                     }
-                    break;
-                
-                case 2:
+                }
+                if (pos==2)
+                {
                     TraNombramiento *pAux2;
                     pAux2 = (TraNombramiento *)pTra[i];
-                    if (pAux->aPagar() > v)
+                    if (pAux2->aPagar() > v)
                     {
-                        pAux->mostrar();
+                        pAux2->mostrar();
                     }
-                    break;
-                    
-                case 3:
-                    TraDestajo *pAux3 = (TraDestajo *)pTra[i];
+                }
+                if (pos ==3)
+                {
+                    TraDestajo *pAux3; 
+                    pAux3= (TraDestajo *)pTra[i];
                     if (pAux3->aPagar() > v)
                     {
                         pAux3->mostrar();
                     }
-                    
-                break;
-
-            default:
-                break;
-            }
-            
+                }
         }
     }
 }
@@ -377,6 +372,10 @@ public:
         }
     }
 
+};
+Empresa::Empresa()
+{
+    n=0;
 };
 Empresa::~Empresa()
 {

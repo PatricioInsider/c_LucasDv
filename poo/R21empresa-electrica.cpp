@@ -28,7 +28,7 @@ public:
         cin >> lecAnterior;
         cout << "Lectura Actual: ";
         cin >> lecActual;
-        while (lecActual < lecAnterior)
+        while (lecActual <= lecAnterior)
         {
             cout << "Te recuerdo que la lectura actual no puede ser menor de la anterior" << endl;
             cout << "Lectura Actual: ";
@@ -72,7 +72,9 @@ public:
 
 Facturas::Facturas(/* args */)
 {
+    numFactura=numMedidor=ci="";
     tipo = 0;
+    lecActual=lecAnterior=valork=0;
 }
 
 Facturas::~Facturas()
@@ -82,8 +84,7 @@ Facturas::~Facturas()
 class FacResidencial : public Facturas
 {
 private:
-    int des;
-
+    float des;
 public:
     FacResidencial(/* args */);
     ~FacResidencial();
@@ -108,13 +109,14 @@ public:
     void mostrar()
     {
         Facturas::mostrar();
-        cout << "Total a pagar: " << total_pagar();
+        cout << "Total a pagar: " << total_pagar()<<endl;
     }
     
 };
 
 FacResidencial::FacResidencial(/* args */)
 {
+    des=0;
     settipo(1);
 }
 
@@ -125,7 +127,7 @@ FacResidencial::~FacResidencial()
 class FacIndustrial : public Facturas
 {
 private:
-    int facMulti;
+    float facMulti;
 
 public:
     FacIndustrial(/* args */);
@@ -135,6 +137,13 @@ public:
         Facturas::leer();
         cout << "Factor multiplicar: " << endl;
         cin >> facMulti;
+        while (facMulti<0)
+        {
+            cout << "De no tener descuento ingresa 0, pero no se puede ingresar un valor negativo"<<endl;
+            cout << "facmultiplicar: " << endl;
+        cin >> facMulti;
+        }
+        
     }
     float total_pagar()
     {
@@ -144,7 +153,8 @@ public:
     void mostrar()
     {
         Facturas::mostrar();
-        cout << "Total a pagar: " << total_pagar();
+        cout<<"Fact multiplicar:"<<facMulti<<endl;
+        cout << "Total a pagar: " << total_pagar()<<endl;
     }
     float getfacMulti()
     {
@@ -155,6 +165,7 @@ public:
 
 FacIndustrial::FacIndustrial(/* args */)
 {
+    facMulti=0;
     settipo(2);
 }
 
@@ -214,8 +225,6 @@ public:
                     pFac[i]->leer();
 
                 default:
-                    cout << "Nose ingreso una opcion correcta" << endl;
-
                     break;
                 }
             }
@@ -244,23 +253,29 @@ public:
     }
     void mostrar_nfactura()
     {
+        cout<<"______________Literal de busqueda Num Factura_______________"<<endl;
         string v;
         int pos;
         cout << "Ingresa el numero de la factura: " << endl;
         cin >> v;
         pos = busqueda(v);
-        if (pos != -1)
+        if (pos == -1)
         {
-            pFac[pos]->mostrar();
+           
+            cout << "no se encontro la factura" << endl;
         }
         else
         {
-            cout << "no se encontro la factura" << endl;
+            pFac[pos]->mostrar();
+            
         }
+        cout<<"______"<<endl;
     }
     // Mostrar la informacion de todas las figuras industriales
     void mostrar_findutriales()
     {
+                cout<<"______________Literal de busqueda Facmulti_______________"<<endl;
+        int con=0;
         float v;
         cout << "Ingresa el valor de factor de multiplicacion" << endl;
         cin >> v;
@@ -275,17 +290,26 @@ public:
                 if (pAux->getfacMulti() > v)
                 {
                     pAux->mostrar();
+                    cout<<endl;
+                    cout<<"__________"<<endl;
+                    con+=1;
                 }
                 }
 
                 
             }
+            if (con==0)
+            {
+                cout<<"No se encontro ninguna factura con la caracteristica"<<endl;
+            }
+            
         }
     }
 };
 
 EmpresaElectrica::EmpresaElectrica(/* args */)
 {
+    
 }
 
 EmpresaElectrica::~EmpresaElectrica()
@@ -304,4 +328,4 @@ int main()
     pCentral->mostrar_nfactura();
     pCentral->mostrar_findutriales();
     delete pCentral;
-}
+};
