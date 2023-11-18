@@ -1,0 +1,113 @@
+/* Programa en C++ que permita el ingreso de varios numeros
+   y generar un listado ordenado de ellos
+   
+   num		Ordenados
+   -4		-4
+   18		0
+   39		12
+   0		18
+   12		39
+*/
+#include <iostream>				//inclusion del archivo de cabecera para i/o
+#define EXT 50							//definicion de cte simbolica
+
+using namespace std;					//espacio de nombres estandar
+
+int main(){								//inicio del programa principal
+	system("color f0");
+
+	int n;								//cantidad de valores a procesar
+	int v[EXT];							//definir un arreglo de valores con hasta EXT elementos
+	int val;							//var que contiene el valor a buscar
+	
+	int leerN(int li, int ls);			//prototipo de la funcion que permite el ingreso de cantidad de valores a procesar
+	void leerNumeros(int n1, int a[]);	//prototipo de la funcion de ingreso de valores
+	void ordenarNumeros(int n1, int a[]);  //prototipo de la funcion que ordena valores
+	void imprimirNumeros(int n1, int a[]);	//prototipo de funcion que presenta valores en pantalla
+	int buscarValoresLineal(int n1, int a[], int vl);	//prototipo de funcion que busca valores dentro del arreglo
+	int buscarValoresBinaria(int n1, int a[], int vl);	//prototipo de funcion que hace busqueda binaria de valores dentro del arreglo
+	
+	n = leerN(1, EXT);					//llamado a la funcion de ingreso de cantidad de valores a procesar
+    leerNumeros(n, v);					//llamado a funcion que ingresa valores
+	ordenarNumeros(n, v);				//llamado a funcion que ordena valores
+	imprimirNumeros(n, v);				//llamado a la funcion que presenta la respuesta
+	if (v[0] == v[n-1]){
+		cout << endl << "Todos los valores son iguales... No existen ni mayor ni menor... Lo siento.....";
+	} else {
+		cout << endl << "El valor menor es: " << v[0];
+		cout << endl << "El valor mayor es: " << v[n-1];
+	}
+	
+	cout << endl << "Ingrese el valor a buscar: ";
+	cin >> val;							//lectura
+	
+//	cout << endl << "El valor " << val << ((buscarValoresLineal(n, v, val) > -1) ? " SI ": " NO " ) << " se encuentra dentro del arreglo...";
+	cout << endl << "El valor " << val << ((buscarValoresBinaria(n, v, val) > -1) ? " SI ": " NO " ) << " se encuentra dentro del arreglo...";
+	cout << endl;
+	system("pause");
+}
+
+int leerN(int li, int ls){				//funcion que permite el ingreso de cantidad de valores a procesar
+	int n;								//var de lectura
+
+	do {								//ciclo de lectura y validacion de n
+		cout << endl << "Ingrese la cantidad de valores a procesar [" << li << " .. " << ls << "]: ";
+		cin >> n;						//lectura
+	}while((n < li) || (n > ls));		//repetir mientras se ingresen valores negativos o cero
+	return n;							//devolver el valor leido
+}
+
+void leerNumeros(int n1, int a[]){		//prototipo de la funcion de ingreso de valores
+	for (int i = 0; (i < n1); i++){		//ciclo de lectura
+		cout << endl << "Ingrese valor para posicion [" << i << "]: ";
+		cin >> a[i];
+	}
+}
+
+void imprimirNumeros(int n1, int a[]){	//prototipo de la funcion de impresion de valores
+	for (int i = 0; (i < n1); i++){		//ciclo de lectura
+		cout << endl << ">  Valor en la posicion [" << i << "]: " << a[i];
+	}
+}
+
+void ordenarNumeros(int n1, int a[]){  	//funcion que ordena valores
+	for (int i = 0; (i < n1-1); i++){	//ciclo de recorrido pivotes
+		for (int j = (i+1); (j < n1); j++){	//ciclo de determinacion de valores con que se compara pivote
+		   if (a[i] > a[j]){			//pivote es mayor
+		   		int aux = a[i];			//intercambiar
+		   		a[i] = a[j];
+		   		a[j] = aux;
+		   }
+		}
+	}
+}
+
+int buscarValoresLineal(int n1, int a[], int vl){	//funcion que busca valores dentro del arreglo
+	int i = 0;			//contadora
+	while (i < n1){		//ciclo de recorrido del arreglo
+		if (a[i] == vl){	//encontrado el valor
+			return i;	//devolver condicion de éxito
+		}
+		i++;				//incrementar contadora
+	}
+	return -1;			//devolver condicion de no encontrado
+}
+
+int buscarValoresBinaria(int n1, int a[], int vl){	//funcion que busca binaria de valores dentro del arreglo
+	int ini, fin, med;		//var para marcar posicion de inicio, fin y medio del arreglo
+
+	ini = 0; fin = (n1-1);
+	while (ini <= fin){		//ciclo de busqueda
+		med = (ini + fin) / 2;	//calcula posicion central
+		if (a[med] == vl){	//valor encontrado
+			return med;		//devuelve posicion de valor encontrado
+		} else {			//no se encuentra el valor pos med
+			if (a[med] < vl){	//pos central es menor que val buscado => analizar segunda mitad del arreglo
+				ini = med + 1;	//marcar nueva posicion de inicio de seccion del arreglo a analizar
+			} else {			//pos central no es mayor que val buscado => es menor => analizar primera mitad de arreglo
+				fin = med - 1;	//marcar nueva posicion de fin de segmento del arreglo a analizar
+			}
+		}
+	}
+	return -1;					//devolver condicion de no encontrado
+}
