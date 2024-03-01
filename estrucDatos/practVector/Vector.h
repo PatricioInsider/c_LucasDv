@@ -176,6 +176,7 @@ void Vector::insertarE()
 void Vector::eliminarE()
 {
 
+	bool en = false;
 	if (getNe() == 0)
 	{
 		cout << "El arreglo está vacío." << endl;
@@ -184,8 +185,8 @@ void Vector::eliminarE()
 	{
 		
 
+		
 		int valor, i, j;
-		bool en = false;
 		cout << "Ingrese el valor que desea eliminar: ";
 		cin >> valor;
 
