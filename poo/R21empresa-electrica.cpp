@@ -319,7 +319,7 @@ EmpresaElectrica::~EmpresaElectrica()
         delete pFac[i];
     }
     
-}
+} 
 
 int main()
 {
